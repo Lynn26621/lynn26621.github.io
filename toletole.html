@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lynn-site</title>
+
+    <style>
+        body {
+            background-image: url("Giygas.gif");
+            margin: 0;
+            float: left;
+
+        }
+
+        .Home {
+            background-color: rgb(17, 17, 17);
+            border: 3px solid crimson;
+            text-align: center;
+            float: left;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            color: whitesmoke;
+        }
+
+        .About {
+            background-color: rgb(17, 17, 17);
+            border: 3px solid crimson;
+            text-align: center;
+            float: left;
+            position: fixed;
+            top: 24px;
+            left: 0px;
+            color: whitesmoke;
+        }
+
+        .Title {
+            float: center;
+            margin: 5% 15% 0% 15%;
+            border: 5px outset crimson;
+            padding: 20px 0px;
+            background-color: rgb(17, 17, 17);
+            color: whitesmoke;
+            font-weight: 3px;
+            font-family: Verdana, sans-serif;
+            text-align: center;
+            overflow: auto;
+            text-shadow: 2px 2px 2px black;
+            position: relative;
+            font-size: 1.6vw;
+        }
+
+        .Body {
+            float: center;
+            margin: 0% 20%;
+            border: 5px outset crimson;
+            padding: 20px 20px 20px 0px;
+            background-color: rgb(17, 17, 17);
+            color: whitesmoke;
+            font-weight: 3px;
+            font-family: Verdana, sans-serif;
+            text-align: center;
+            /* position: relative; */
+            overflow: auto;
+            text-shadow: 2px 2px 2px black;
+            font-size: 1.1vw;
+            align-content: center;
+        }
+
+        a {
+            color: whitesmoke;
+            text-decoration: none;
+        }
+
+        .header {
+            background-color: rgb(17, 17, 17);
+            border: 3px solid crimson;
+            text-align: center;
+            float: left;
+            color: whitesmoke;
+            overflow: hidden;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+
+        .image-gallery img {
+            position: relative;
+            margin: 0;
+            padding: 10px;
+            width: 33%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <div class="header">
+        <a href="http://lynn26621.github.io/index.html">Home | </a>
+        <a href="http://lynn26621.github.io/toletole.html">Tole Tole | </a>
+        <a href="http://lynn26621.github.io/shark.html">Shark</a>
+    </div>
+    <div class="Body">
+        <div class="image-gallery" id="imageGallery"></div>
+
+    </div>
+
+
+</body>
+<script>
+    const imageGallery = document.getElementById('imageGallery');
+    const numberOfImages = 10; // Total number of images
+    const folderPath = './ToleTole/';
+
+    for (let i = 1; i <= numberOfImages; i++) {
+        const img = document.createElement('img');
+        const jpgPath = `${folderPath}cat${i}.jpg`;
+        const pngPath = `${folderPath}cat${i}.png`;
+        const gifPath = `${folderPath}cat${i}.gif`;
+
+        // Try loading .jpg first, then fallback to .png
+        img.src = jpgPath;
+        img.onerror = () => {
+            img.src = pngPath;
+            img.onerror = () => {
+                img.src = gifPath;
+            };
+        };
+        img.alt = `Image ${i}`;
+        imageGallery.appendChild(img);
+        console.log(`Loaded: ${jpgPath} and ${pngPath}`);
+    }
+
+</script>
+
+</html>
