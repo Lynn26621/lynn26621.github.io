@@ -1,0 +1,76 @@
+<!--
+Change active class in header div for each page
+Clone this base to all pages
+Quality Check lol
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judicial Systems</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('/Public/Court.png');
+            background-size: cover;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        .header {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .header a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .header a:hover {
+            background-color: #555;
+            color: white;
+        }
+
+        .header a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        p {
+            color: #b0b0b0;
+        }
+
+        h1 {
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="http://lynn26621.github.io/projects/CivicsProj/index.htm" class="active">Home</a>
+        <a href="http://lynn26621.github.io/projects/CivicsProj/structure.htm">Structure of the court</a>
+        <a href="http://lynn26621.github.io/projects/CivicsProj/powers.htm">Judicial Powers</a>
+        <a href="http://lynn26621.github.io/projects/CivicsProj/appointment.htm">Appointment Process</a>
+        <a href="http://lynn26621.github.io/projects/CivicsProj/precedents.htm">Major Cases</a>
+        <a href="http://lynn26621.github.io/projects/CivicsProj/currentCase.htm">Current Case</a>
+        <a href="http://lynn26621.github.io/projects/CivicsProj/citations.htm">Citations</a>
+    </div>
+
+    <div>
+        <h1>Welcome to my judicial systems project!</h1>
+        <p>This is the home page, navigate using the tabs at the top.</p>
+    </div>
+</body>
+
+</html>

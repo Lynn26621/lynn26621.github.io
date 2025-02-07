@@ -76,11 +76,19 @@
 
         .header {
             background-color: rgb(17, 17, 17);
-            border: 3px solid crimson;
+            /* border: 3px solid crimson; */
             text-align: center;
             float: left;
             color: whitesmoke;
             overflow: hidden;
+            display: block;
+            padding: 14px 16px;
+            text-decoration: none;
+
+        }
+
+        .header a.active {
+            background-color: crimson;
         }
     </style>
 </head>
@@ -88,9 +96,10 @@
 
 <body>
     <div class="header">
-        <a href="http://lynn26621.github.io/index.html">Home | </a>
-        <a href="http://lynn26621.github.io/toletole.html">Tole Tole | </a>
+        <a href="http://lynn26621.github.io/index.html" class="active">Home</a>
+        <a href="http://lynn26621.github.io/toletole.html">Tole Tole</a>
         <a href="http://lynn26621.github.io/shark.html">Shark</a>
+        <a href="http://lynn26621.github.io/projects.html">Projects</a>
     </div>
     <div class="Title">
         <h1>

@@ -54,8 +54,8 @@
         }
 
         .Body {
-            float: center;
-            margin: 0% 20%;
+            float: left;
+            /* margin: 0% 20%; */
             border: 5px outset crimson;
             padding: 20px 20px 20px 0px;
             background-color: rgb(17, 17, 17);
@@ -67,7 +67,6 @@
             overflow: auto;
             text-shadow: 2px 2px 2px black;
             font-size: 1.1vw;
-            align-content: center;
         }
 
         a {
@@ -91,58 +90,26 @@
         .header a.active {
             background-color: crimson;
         }
-
-        .image-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-        }
-
-        .image-gallery img {
-            position: relative;
-            margin: 0;
-            padding: 10px;
-            width: 33%;
-            box-sizing: border-box;
-        }
     </style>
 </head>
 
 
-
 <body>
     <div class="header">
-        <a href="http://lynn26621.github.io/index.html" >Home</a>
+        <a href="http://lynn26621.github.io/index.html">Home</a>
         <a href="http://lynn26621.github.io/toletole.html">Tole Tole</a>
-        <a href="http://lynn26621.github.io/shark.html" class="active">Shark</a>
-        <a href="http://lynn26621.github.io/projects.html">Projects</a>
-    </div>
-    <div class="Body">
-        <div class="image-gallery" id="imageGallery"></div>
+        <a href="http://lynn26621.github.io/shark.html">Shark</a>
+        <a href="http://lynn26621.github.io/projects.html" class="active">Projects</a>
+    </div> <br><br>
+    <div style="background-color: rgb(17, 17, 17);">
+        <p style="color: whitesmoke; text-align: center;">Here are some of my projects, you can find more on GitHub!
+            <br> _________________________________________________</p>
+        <ul>
+            <li>
+                <a href="http://lynn26621.github.io/projects/CivicsProj/index.htm">Civics Judicial Branch Project</a>
+            </li>
+        </ul>
     </div>
 </body>
-<script>
-    const imageGallery = document.getElementById('imageGallery');
-        const numberOfImages = 303; // Total number of images
-        const folderPath = './SHARK/';
-
-        for (let i = 1; i <= numberOfImages; i++) {
-            const img = document.createElement('img');
-            const jpgPath = `${folderPath}img${i}.jpg`;
-            const pngPath = `${folderPath}img${i}.png`;
-
-            // Try loading .jpg first, then fallback to .png
-            img.src = jpgPath;
-            img.onerror = () => {
-                img.src = pngPath;
-            };
-            img.alt = `Image ${i}`;
-            imageGallery.appendChild(img);
-            console.log(`Loaded: ${jpgPath} and ${pngPath}`);
-        }
-    </script>
-</script>
 
 </html>
